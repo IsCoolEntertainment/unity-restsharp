@@ -1,4 +1,4 @@
-# RestSharp - Simple REST Client for Unity3D
+# RestSharp - Simple REST Client for Unity
 
 Reduced version of original RestSharp client (no authentication for the moment, for instance).
 Some of the RestSharp APIs were based on .NET natives.
