@@ -1,5 +1,11 @@
 # RestSharp - Simple REST Client for Unity3D
 
+Reduced version of original RestSharp client (no authentication for the moment, for instance).
+Some of the RestSharp APIs were based on .NET natives.
+
+This current reduced version works with UnityEngine and its mono system libs.
+
+Originally written by [restsharp team](https://github.com/restsharp/RestSharp).
 Based on [Cratesmith](https://github.com/Cratesmith/RestSharp-for-unity3d) fork.
 
 ## Working example
