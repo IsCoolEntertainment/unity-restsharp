@@ -21,6 +21,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using UnityEngine;
 
 #if SILVERLIGHT
 using System.Windows.Browser;
@@ -40,7 +41,7 @@ namespace RestSharp.Extensions
 	{
 		public static string UrlDecode(this string input)
 		{
-			return HttpUtility.UrlDecode(input);
+			return WWW.UnEscapeURL(input);
 		}
 
 		/// <summary>
@@ -49,18 +50,9 @@ namespace RestSharp.Extensions
 		/// </summary>
 		public static string UrlEncode(this string input)
 		{
-			return Uri.EscapeDataString(input);
+			return WWW.EscapeURL(input);
 		}
 
-		public static string HtmlDecode(this string input)
-		{
-			return HttpUtility.HtmlDecode(input);
-		}
-
-		public static string HtmlEncode(this string input)
-		{
-			return HttpUtility.HtmlEncode(input);
-		}
 
 #if FRAMEWORK
 		public static string HtmlAttributeEncode(this string input)
