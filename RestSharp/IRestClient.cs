@@ -45,10 +45,6 @@ namespace RestSharp
 		/// <summary>
 		/// 
 		/// </summary>
-		IAuthenticator Authenticator { get; set; }
-		/// <summary>
-		/// 
-		/// </summary>
 		string BaseUrl { get; set; }
 		/// <summary>
 		/// 

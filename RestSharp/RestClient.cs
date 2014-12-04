@@ -189,11 +189,6 @@ namespace RestSharp
 		/// </summary>
 		public bool UseSynchronizationContext { get; set; }
 
-		/// <summary>
-		/// Authenticator to use for requests made by this client instance
-		/// </summary>
-		public IAuthenticator Authenticator { get; set; }
-
 		private string _baseUrl;
 		/// <summary>
 		/// Combined with Request.Resource to construct URL for request
@@ -215,14 +210,6 @@ namespace RestSharp
 				{
 					_baseUrl = _baseUrl.Substring(0, _baseUrl.Length - 1);
 				}
-			}
-		}
-
-		private void AuthenticateIfNeeded(RestClient client, IRestRequest request)
-		{
-			if (Authenticator != null)
-			{
-				Authenticator.Authenticate(client, request);
 			}
 		}
 
